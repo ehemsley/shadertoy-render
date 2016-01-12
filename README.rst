@@ -14,14 +14,15 @@ Command-line arguments are documented with the ``-h`` switch, for example:
 * ``--duration`` — Total length of the output video in seconds, e.g. ``45.0``.
 * ``--rate`` — Number of frames per second used during rendering, e.g. ``60``.
 * ``--verbose`` — Show the full output of ``ffmpeg`` in verbose mode.
+* ``--channel0`` — Path to the image texture for ``channel0``. Same with ``channel1`` ``channel2`` ``channel3``
 
 Example of more advanced usage:
 
-	> python shadertoy-render.py in.glsl out.mp4 --size=1920x1080 --rate=60 --duration=120.0
+	> python shadertoy-render.py in.glsl -output out.mp4 --size=1920x1080 --rate=60 --duration=120.0 --channel0 img/tex00.jpg
 
 It should run on Linux and OSX where ``ffmpeg`` is in the path, on Windows with minor changes assuming the binary is found.  Python dependencies include `numpy` and `vispy`, which you can install them with PIP as follows:
 
-    > pip install numpy vispy
+	> pip install numpy vispy
 
 The output is a MP4 file with default encoding settings, which you can upload to YouTube for example.  See the source code for details!
 
