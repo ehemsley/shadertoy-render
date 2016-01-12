@@ -18,7 +18,7 @@ Command-line arguments are documented with the ``-h`` switch, for example:
 
 Example of more advanced usage:
 
-	> python shadertoy-render.py in.glsl -output out.mp4 --size=1920x1080 --rate=60 --duration=120.0 --channel0 img/tex00.jpg
+	> python shadertoy-render.py in.glsl --output out.mp4 --size=1920x1080 --rate=60 --duration=120.0 --channel0 img/tex00.jpg
 
 It should run on Linux and OSX where ``ffmpeg`` is in the path, on Windows with minor changes assuming the binary is found.  Python dependencies include `numpy` and `vispy`, which you can install them with PIP as follows:
 
