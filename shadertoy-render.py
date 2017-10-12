@@ -249,8 +249,12 @@ class RenderingCanvas(app.Canvas):
 				print("Shader failed to compile:", file=sys.stderr)
 				print(errors, file=sys.stderr)
 
-				# Switch to error shader
+				# Quit so we dont render error shader to file
+				if not self._interactive:
+					os._exit(1)
+					return
 
+				# Switch to error shader
 				self._glsl = error_shader
 				self.update()
 			else:
